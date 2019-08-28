@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": 1,
+  "Name" : "lib_hdc1000_example",
+  "ComponentId" : "4a13ed32-9b06-4f47-834d-0f6c8f7279f6",
+  "EntryPoint": "/bin/app",
+  "CmdArgs": [],
+  "Capabilities": {
+    "AllowedConnections": [],
+    "Gpio": [ "$PROJECT_GPIO2" ],
+    "I2cMaster": [ "$PROJECT_ISU2_I2C" ],
+    "Uart": [],
+    "WifiConfig": false
+  },
+  "ApplicationType":"Default"
+}
