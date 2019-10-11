@@ -25,11 +25,11 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
     <UseDebugLibraries>true</UseDebugLibraries>
-    <TargetSysroot>2+Beta1905</TargetSysroot>
+    <TargetSysroot>3</TargetSysroot>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
     <UseDebugLibraries>false</UseDebugLibraries>
-    <TargetSysroot>2</TargetSysroot>
+    <TargetSysroot>3</TargetSysroot>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings" />
@@ -37,6 +37,10 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <TargetHardwareDirectory>..\hardware\avnet_mt3620_sk</TargetHardwareDirectory>
+    <TargetHardwareDefinition>project_hardware.json</TargetHardwareDefinition>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <TargetHardwareDirectory>..\hardware\avnet_mt3620_sk</TargetHardwareDirectory>
     <TargetHardwareDefinition>project_hardware.json</TargetHardwareDefinition>
   </PropertyGroup>
