@@ -129,6 +129,11 @@ hdc1000_platform_cb(hdc1000_t *p_hdc, uint8_t msg, uint8_t arg_int,
         break;
 
     case HDC1000_MSG_I2C_WRITE_BYTE:
+        // OS 19.11 workaround delay
+        sleepTime.tv_sec = 0;
+        sleepTime.tv_nsec = 800000;
+        nanosleep(&sleepTime, NULL);
+
         // Write 1 byte from arg_int to I2C address
         result = I2CMaster_Write(i2cFd, p_hdc->i2c_addr, &arg_int, 1);
         if (result == -1)
